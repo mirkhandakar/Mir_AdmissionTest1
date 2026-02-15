@@ -3,13 +3,18 @@
 class Program
 {
     static void Main(string[] args)
-    {        
+    {
         int[] numbers = { 10, 20, 30, 40, 50 };
-        
-        double result = numbers.Calculate(x => (double)x);
 
-        double toDoubleResult = result * 2;
+        Console.WriteLine("Original to Doubled");
 
-        Console.WriteLine($"The double result is: {toDoubleResult}");
+        foreach (int num in numbers)
+        {
+            int[] tempArray = { num };
+
+            double doubled = tempArray.Calculate(x => (double)x * 2);
+
+            Console.WriteLine($"{num} → {doubled}");
+        }
     }
 }
