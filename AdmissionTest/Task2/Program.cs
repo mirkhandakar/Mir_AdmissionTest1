@@ -18,7 +18,7 @@ class Program
         {
             Bulb bulb = new Bulb();
 
-            // Using named methods as delegates
+            // change 
             bulb.On += new EventHandler(OnHandler);
             bulb.Off += new EventHandler(OffHandler);
 
